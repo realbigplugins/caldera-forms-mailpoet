@@ -1,0 +1,125 @@
+[
+    {
+        "name": "calderawp/dismissible-notice",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/CalderaWP/dismissible_notice.git",
+            "reference": "26a0a00cced207464eb005d2eeb3ab93727363d3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/CalderaWP/dismissible_notice/zipball/26a0a00cced207464eb005d2eeb3ab93727363d3",
+            "reference": "26a0a00cced207464eb005d2eeb3ab93727363d3",
+            "shasum": ""
+        },
+        "time": "2015-08-24 20:27:16",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL v2+"
+        ],
+        "authors": [
+            {
+                "name": "Josh Pollock",
+                "email": "Josh@JoshPress.net"
+            }
+        ],
+        "description": "Creates a dismissible--via AJAX--admin nag."
+    },
+    {
+        "name": "calderawp/licensing-helper",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/CalderaWP/licensing-helper.git",
+            "reference": "f378f3ffd1f527360d0b462ecebced4c77e78a27"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/CalderaWP/licensing-helper/zipball/f378f3ffd1f527360d0b462ecebced4c77e78a27",
+            "reference": "f378f3ffd1f527360d0b462ecebced4c77e78a27",
+            "shasum": ""
+        },
+        "require": {
+            "calderawp/dismissible-notice": "dev-master",
+            "php": ">=5.3.0"
+        },
+        "time": "2016-11-06 19:40:16",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "calderawp\\licensing_helper\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "David Cramer",
+                "homepage": "http://cramer.co.za",
+                "role": "Developer"
+            },
+            {
+                "name": "Josh Pollock",
+                "email": "Josh@JoshPress.net",
+                "homepage": "http://joshpress.net"
+            }
+        ],
+        "description": "Helper class for CalderaWP Licensing Manager",
+        "keywords": [
+            "wordpress"
+        ]
+    },
+    {
+        "name": "drewm/mailchimp-api",
+        "version": "v2.4",
+        "version_normalized": "2.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drewm/mailchimp-api.git",
+            "reference": "fe480bb652f85270227bf6d639b0026a531f21fc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drewm/mailchimp-api/zipball/fe480bb652f85270227bf6d639b0026a531f21fc",
+            "reference": "fe480bb652f85270227bf6d639b0026a531f21fc",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.0.*",
+            "vlucas/phpdotenv": "^2.0"
+        },
+        "time": "2017-02-16 13:24:20",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DrewM\\MailChimp\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Drew McLellan",
+                "email": "drew.mclellan@gmail.com",
+                "homepage": "http://allinthehead.com/"
+            }
+        ],
+        "description": "Super-simple, minimum abstraction MailChimp API v3 wrapper",
+        "homepage": "https://github.com/drewm/mailchimp-api"
+    }
+]
