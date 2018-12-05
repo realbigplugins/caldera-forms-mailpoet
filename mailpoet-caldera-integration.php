@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: MailPoet Caldera Integration
- * Plugin URI: http://wooninjas.com/
+ * Plugin URI: http://wooninjas.com
  * Description: It enables you to add the users to MailPoet list on form submission.
  * Version: 1.0
  * Author: WooNinjas
- * Author URI: http://wooninjas.com/
+ * Author URI: http://wooninjas.com
  * Text Domain: mp_cal_addon
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@ register_activation_hook( __FILE__, [ 'MailPoet_CALDERA', 'activation' ] );
 register_deactivation_hook( __FILE__, [ 'MailPoet_CALDERA', 'deactivation' ] );
 
 /**
- * Class MP_CALDERA_Main
+ * Class MailPoet_CALDERA
  */
 class MailPoet_CALDERA {
 
