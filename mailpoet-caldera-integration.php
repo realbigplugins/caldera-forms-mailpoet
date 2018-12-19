@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: MailPoet Caldera Integration
- * Plugin URI: http://wooninjas.com
- * Description: It enables you to add the users to MailPoet list on form submission.
+ * Plugin Name: Caldera Forms - MailPoet
+ * Plugin URI: https://calderaforms.com/
+ * Description: Integrates Caldera Forms with MailPoet so that form submissions can result in new subscribers getting added to MailPoet lists
  * Version: 1.0
- * Author: WooNinjas
- * Author URI: http://wooninjas.com
+ * Author: Real Big Plugins
+ * Author URI: https://realbigplugins.com/
  * Text Domain: mp_cal_addon
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
