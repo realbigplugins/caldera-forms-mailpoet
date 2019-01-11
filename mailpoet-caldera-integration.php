@@ -116,7 +116,9 @@ class MailPoet_CALDERA {
 
 	private function hooks() {
 
-	    // filter to initialize the license system
+	   	/**
+		 * filter to initialize the license system
+		 */
 		add_action( 'admin_init', [ $this, 'mp_cal_init_license' ] );
 
 		add_action( 'plugins_loaded', [ $this, 'upgrade' ] );
@@ -126,11 +128,11 @@ class MailPoet_CALDERA {
 	/**
      * License function
      */
-	function mp_cal_init_license(){
+	function mp_cal_init_license() {
 		$plugin = array(
 			'slug'      =>  'mailpoet-caldera-integration',
 			'name'      =>  'MailPoet Caldera Integration',
-			'author'    =>  'WooNinjas',
+			'author'    =>  'Real Big Plugins',
 			'url'		=>  'https://calderaforms.com/',
 			'version'	=>	( !empty( self::$VERSION ) ? self::$VERSION : '1.0' ),
 			'key_store'	=>  'cf_mailpoet_license_key',
@@ -141,15 +143,14 @@ class MailPoet_CALDERA {
 	}
 
 	/**
-	 * Check if GamifyWP and EDD is available
+	 * Check if Caldera and MailPoet is available
 	 *
 	 * @since  1.0
-	 * @return bool True if GamifyWP and EDD is available, false otherwise
+	 * @return bool True if Caldera and MailPoet is available, false otherwise
 	 */
 	public function meets_requirements() {
 
-		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-        if ( ! is_plugin_active( 'mailpoet/mailpoet.php' ) || ! is_plugin_active( 'caldera-forms/caldera-core.php' ) ) {
+		if ( ! defined( 'CFCORE_VER' ) || ! defined( 'MAILPOET_VERSION' ) ) {
 			deactivate_plugins( plugin_basename( __FILE__ ), true );
 			return false;
         } 
@@ -182,4 +183,4 @@ function MailPoet_CALDERA() {
 	$GLOBALS['mailpoet_caldera'] = $instance;
 
 }
-add_action( 'plugins_loaded', 'MailPoet_CALDERA');
+add_action( 'plugins_loaded', 'MailPoet_CALDERA' );
