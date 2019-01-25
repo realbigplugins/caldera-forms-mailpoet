@@ -56,29 +56,6 @@ class MailPoet_CALDERA {
 		if ( ! self::meets_requirements() ) {
 			return ;
 		}
-
-		update_option( 'mp_cal_version', self::$VERSION );
-	}
-
-	/**
-	 * Deactivation function hook
-	 *
-	 * @since 1.0
-	 * @return void
-	 */
-	public function deactivation() {
-		delete_option( 'mp_cal_version' );
-	}
-
-	/**
-	 * Upgrade function hook
-	 *
-	 * @since 1.0
-	 * @return void
-	 */
-	public function upgrade() {
-		if ( get_option( 'mp_cal_version' ) != self::$VERSION ) {
-		}
 	}
 
 	/**
@@ -106,8 +83,12 @@ class MailPoet_CALDERA {
 	 */
 	private function includes() {
 
-		if ( file_exists( MP_CAL_INCLUDES_DIR . 'mp_cal_functions.php' ) ) {
-			require_once( MP_CAL_INCLUDES_DIR . 'mp_cal_functions.php' );
+		if ( file_exists( MP_CAL_INCLUDES_DIR . 'base.php' ) ) {
+			require_once( MP_CAL_INCLUDES_DIR . 'base.php' );
+		}
+
+		if ( file_exists( MP_CAL_INCLUDES_DIR . 'functions.php' ) ) {
+			require_once( MP_CAL_INCLUDES_DIR . 'functions.php' );
 		}
 
 		include_once MP_CAL_DIR . '/vendor/autoload.php';
