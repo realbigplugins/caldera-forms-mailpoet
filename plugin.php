@@ -3,7 +3,7 @@
  * Plugin Name: Caldera Forms - MailPoet
  * Plugin URI: https://calderaforms.com/
  * Description: Integrates Caldera Forms with MailPoet so that form submissions can result in new subscribers getting added to MailPoet lists
- * Version: 1.0
+ * Version: 1.0.0
  * Author: Real Big Plugins
  * Author URI: https://realbigplugins.com/
  * Text Domain: mp_cal_addon
@@ -19,8 +19,6 @@ register_deactivation_hook( __FILE__, [ 'MailPoet_CALDERA', 'deactivation' ] );
  * Class MailPoet_CALDERA
  */
 class MailPoet_CALDERA {
-
-    public static $VERSION = '1.0';
 
 	/**
 	 * @var self
@@ -70,6 +68,7 @@ class MailPoet_CALDERA {
 		define( 'MP_CAL_DIR_FILE', MP_CAL_DIR . basename( __FILE__ ) );
 		define( 'MP_CAL_INCLUDES_DIR', trailingslashit( MP_CAL_DIR . 'includes' ) );
 		define( 'MP_CAL_BASE_DIR', plugin_basename( __FILE__ ) );
+        define( 'CF_MAILPOET_VER', '1.0.0' );
 		
 		/**
 		 * URLS
@@ -115,7 +114,6 @@ class MailPoet_CALDERA {
 			'name'      =>  'MailPoet Caldera Integration',
 			'author'    =>  'Real Big Plugins',
 			'url'		=>  'https://calderaforms.com/',
-			'version'	=>	( !empty( self::$VERSION ) ? self::$VERSION : '1.0' ),
 			'key_store'	=>  'cf_mailpoet_license_key',
 			'file'		=>  dirname( __FILE__ ),
 		);

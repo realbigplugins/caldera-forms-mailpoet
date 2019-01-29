@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'calderawp\\licensing_helper\\' => array($vendorDir . '/calderawp/licensing-helper/src'),
-    'DrewM\\MailChimp\\' => array($vendorDir . '/drewm/mailchimp-api/src'),
 );
